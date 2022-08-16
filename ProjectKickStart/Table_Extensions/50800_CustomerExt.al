@@ -6,6 +6,7 @@ tableextension 50800 Customer extends Customer
         {
             DataClassification = ToBeClassified;
         }
+
     }
 
     var
