@@ -42,6 +42,25 @@ table 50802 "Test Table"
 
         }
 
+        field(8; "Total Amount"; Decimal)
+        {
+            DataClassification = ToBeClassified;
+            // trigger OnValidate()
+            // var
+            //     tot: Record "Test Line Sub Entry";
+
+            // begin
+            //     "Total Amount" := tot."Total Amount";
+            // end;
+        }
+        field(9; "Line Amount Tot."; Decimal)
+        {
+            FieldClass = FlowField;
+            CalcFormula = sum("Test Line Sub Entry".Amount);
+        }
+
+
+
 
     }
 

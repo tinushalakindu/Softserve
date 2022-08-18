@@ -16,6 +16,10 @@ page 50802 "Test Line Sub Page form"
                     ApplicationArea = All;
 
                 }
+                field("Document No."; Rec."Document No.")
+                {
+                    ApplicationArea = All;
+                }
                 field("Item Description"; Rec."Item Description")
                 {
                     ApplicationArea = All;
@@ -36,6 +40,9 @@ page 50802 "Test Line Sub Page form"
                     ApplicationArea = All;
 
                 }
+
+
+
             }
 
         }
