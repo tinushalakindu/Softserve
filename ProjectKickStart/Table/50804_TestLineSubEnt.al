@@ -33,22 +33,22 @@ table 50804 "Test Line Sub Entry"
 
 
 
-                TestLinRec.Reset();
-                TestLinRec.SetRange("Item No.", "Item No.");
-                if TestLinRec.FindSet() then begin
-                    TestLinRec.CalcSums(Amount);
-                    totAmt := TestLinRec.Amount;
+                // TestLinRec.Reset();
+                // TestLinRec.SetRange("Item No.", "Item No.");
+                // if TestLinRec.FindSet() then begin
+                //     TestLinRec.CalcSums(Amount);
+                //     totAmt := TestLinRec.Amount;
 
-                end;
-                Message(' Total Amount %1', totAmt);
+                // end;
+                // Message(' Total Amount %1', totAmt);
 
 
-                TestHead.Reset();
-                TestHead.SetRange("Invoice Number.", "Document No.");
-                if TestHead.FindFirst() then begin
-                    TestHead."Total Amount" := "Total Amount";
-                    TestHead.Modify();
-                end;
+                // TestHead.Reset();
+                // TestHead.SetRange("Invoice Number.", "Document No.");
+                // if TestHead.FindFirst() then begin
+                //     TestHead."Total Amount" := "Total Amount";
+                //     TestHead.Modify();
+                // end;
 
 
 
