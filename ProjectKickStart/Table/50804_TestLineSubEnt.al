@@ -40,7 +40,7 @@ table 50804 "Test Line Sub Entry"
                 //     totAmt := TestLinRec.Amount;
 
                 // end;
-                // Message(' Total Amount %1', totAmt);
+                // // Message(' Total Amount %1', totAmt);
 
 
                 // TestHead.Reset();
@@ -107,4 +107,4 @@ table 50804 "Test Line Sub Entry"
 
 }
 
-//resdsds 
+//resdsds  sdxcdv 
