@@ -1,59 +1,57 @@
-page 50803 "Trainee Header P"
+page 50807 "Working Hours Line Page"
 {
-    PageType = List;
+    PageType = ListPart;
     ApplicationArea = All;
     UsageCategory = Lists;
-    SourceTable = "Trainee Header T";
-    CardPageId = 50804;
+    SourceTable = "Working Hours Line T";
 
     layout
     {
         area(Content)
         {
-            repeater("Trainee Details")
+            repeater("Working Hours Line")
             {
-                field("Trainee No."; Rec."Trainee No.")
+                field("Document No"; Rec."Document No")
                 {
                     ApplicationArea = All;
 
                 }
-                field("First Name"; Rec."First Name")
+                field("Line No"; Rec."Line No")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Last Name"; Rec."Last Name")
+                field(Description; Rec.Description)
                 {
                     ApplicationArea = All;
 
                 }
-                field(Email; Rec.Email)
+                field("Today Date"; Rec."Starting Date")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Personal Contact No."; Rec."Personal Contact No.")
+                field("End Date"; Rec."End Date")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Office Contact No."; Rec."Office Contact No.")
+                field("Starting Time"; Rec."Starting Time")
                 {
                     ApplicationArea = All;
 
                 }
-                field("Trainee Join Date"; Rec."Trainee Join Date")
+                field("End Time"; Rec."End Time")
                 {
-                    ApplicationArea = all;
+                    ApplicationArea = All;
 
                 }
-
             }
         }
-        area(Factboxes)
-        {
+        // area(Factboxes)
+        // {
 
-        }
+        // }
     }
 
     actions

@@ -1,30 +1,25 @@
-page 50805 "Working Hours Header P"
+page 50806 "Working Hours Card P"
 {
-    PageType = List;
+    PageType = Card;
     ApplicationArea = All;
-    UsageCategory = Lists;
+    UsageCategory = Administration;
     SourceTable = "Working Hours Header T";
-    CardPageId = 50806;
-    Caption = 'Working Hours';
 
     layout
     {
         area(Content)
         {
-            repeater(Genaral)
+            group("Trainee Details")
             {
                 field(No; Rec.No)
                 {
                     ApplicationArea = All;
-
                 }
-
                 field("Trainee ID"; Rec."Trainee ID")
                 {
                     ApplicationArea = All;
 
                 }
-
                 field("Trainee First Name"; Rec."Trainee First Name")
                 {
                     ApplicationArea = All;
@@ -39,10 +34,11 @@ page 50805 "Working Hours Header P"
 
 
             }
-        }
-        area(Factboxes)
-        {
-
+            part("Working Hours Line"; "Working Hours Line Page")
+            {
+                ApplicationArea = All;
+                SubPageLink = "Document No" = field(No);
+            }
         }
     }
 
@@ -54,11 +50,14 @@ page 50805 "Working Hours Header P"
             {
                 ApplicationArea = All;
 
-                trigger OnAction();
+                trigger OnAction()
                 begin
 
                 end;
             }
         }
     }
+
+    var
+        myInt: Integer;
 }

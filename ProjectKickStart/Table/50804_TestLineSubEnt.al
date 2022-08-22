@@ -25,8 +25,8 @@ table 50804 "Test Line Sub Entry"
             DataClassification = ToBeClassified;
             trigger OnValidate()
             var
-                TestLinRec: Record "Test Line Sub Entry";
-                TestHead: Record "Test Table";
+            //TestLinRec: Record "Test Line Sub Entry";
+            // TestHead: Record "Test Table";
             //Total : Record "Test Table";
             begin
                 Amount := "Unit Price" * QTC;

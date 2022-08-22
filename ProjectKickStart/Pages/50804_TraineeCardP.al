@@ -45,6 +45,14 @@ page 50804 "Trainee Card P"
                 {
                     ApplicationArea = All;
                 }
+                field("Trainee Join Date"; Rec."Trainee Join Date")
+                {
+                    ApplicationArea = All;
+                }
+                field("Home Address"; Rec."Home Address")
+                {
+                    ApplicationArea = All;
+                }
 
             }
         }

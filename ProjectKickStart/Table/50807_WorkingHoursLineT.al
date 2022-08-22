@@ -1,59 +1,41 @@
-table 50805 "Trainee Header T"
+table 50807 "Working Hours Line T"
 {
     DataClassification = ToBeClassified;
 
     fields
     {
-        field(1; "Trainee No."; Code[20])
+        field(1; "Line No"; Integer)
         {
             DataClassification = ToBeClassified;
+            AutoIncrement = true;
 
         }
 
-        field(2; "First Name"; Text[30])
+        field(2; "Document No"; Integer)
         {
             DataClassification = ToBeClassified;
-
         }
-        field(3; "Last Name"; Text[30])
+        field(3; Description; text[250])
         {
             DataClassification = ToBeClassified;
-
         }
-
-        field(4; "Email"; Text[50])
+        field(4; "Starting Date"; Date)
         {
             DataClassification = ToBeClassified;
-
         }
-
-        field(5; "Personal Contact No."; Integer)
-        {
-            DataClassification = ToBeClassified;
-
-        }
-        field(6; "Office Contact No."; Integer)
-        {
-            DataClassification = ToBeClassified;
-
-        }
-        field(7; Gender; Option)
-        {
-            DataClassification = ToBeClassified;
-            OptionMembers = " ","Male","Female";
-            OptionCaption = ' ,Male,Femaile';
-
-        }
-        field(8; "Trainee Join Date"; Date)
-        {
-            DataClassification = ToBeClassified;
-
-        }
-        field(9; "Home Address"; Text[100])
+        field(5; "End Date"; Date)
         {
             DataClassification = ToBeClassified;
         }
 
+        field(6; "Starting Time"; Time)
+        {
+            DataClassification = ToBeClassified;
+        }
+        field(7; "End Time"; Time)
+        {
+            DataClassification = ToBeClassified;
+        }
 
 
 
@@ -61,7 +43,7 @@ table 50805 "Trainee Header T"
 
     keys
     {
-        key(PK; "Trainee No.")
+        key(PK; "Line No", "Document No")
         {
             Clustered = true;
         }

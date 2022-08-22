@@ -1,21 +1,25 @@
-table 50806 "Real Working Hours"
+//table 50806 "Real Working Hours"
+table 50806 "Working Hours Header T"
 {
     DataClassification = ToBeClassified;
+    Caption = 'Working Hours';
 
     fields
     {
         field(1; No; Integer)
         {
             DataClassification = ToBeClassified;
-
+            AutoIncrement = true;
         }
 
 
         field(3; "Trainee ID"; Code[20])
         {
             DataClassification = ToBeClassified;
-            TableRelation = "Trainee Header T"."Trainee No.";
-
+            //TableRelation = "Trainee Header T"."Trainee No." where("Trainee No."=field("Trainee First Name"<>"Last Name"));
+            //TableRelation = "Trainee Header T"."Trainee No.";
+            // ValidateTableRelation = false;
+            TableRelation = "Trainee Header T";
 
         }
 
@@ -34,16 +38,11 @@ table 50806 "Real Working Hours"
         }
 
 
-        field(4; Date; Date)
-        {
-            DataClassification = ToBeClassified;
-
-        }
     }
 
     keys
     {
-        key(PK; No)
+        key(PK; No, "Trainee ID")
         {
             Clustered = true;
         }
@@ -51,17 +50,19 @@ table 50806 "Real Working Hours"
 
     var
         myInt: Integer;
-        TraineeID: Record "Trainee Header T";
+    // TraineeID: Record "Trainee Header T";
 
 
     trigger OnInsert()
     begin
 
+        //No += No + 1;
+
     end;
 
     trigger OnModify()
     begin
-
+        //No += No + 1;
     end;
 
     trigger OnDelete()
